@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,18 @@ Route::middleware('auth')
     ->name('admin.') // inizio di ogni nome delle rotte del gruppo
     ->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-    });
+        Route::resource('admin/projects', Admin\ProjectController::class);
+    
+    });    
+    Route::middleware(['auth'])->group(function () {
+         
+        });
+        
 
 require __DIR__ . '/auth.php';
+
+
+// creare controller dentro Admin/ProjectController, di tipo resource (--resource)
+// aggiungere la rotta dentro il gruppo di rotte protetto dal middleware
+// implementare metodo index di PorjectController (Project::all())
+// creare la view e visualizzare i dati passati dal controller
