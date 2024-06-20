@@ -15,6 +15,11 @@
             <textarea class="form-control" id="content" name="content" rows="3"></textarea>
         </div>
 
+        <div class="mb-3">
+            <label for="slug" class="form-label">slug</label>
+            <textarea class="form-control" id="slug" name="slug" rows="3"></textarea>
+        </div>
+
         <button class="btn btn-success" type="submit">Salva</button>
     </form>
 @endsection

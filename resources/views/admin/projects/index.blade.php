@@ -25,7 +25,9 @@
                     <th scope="row">{{ $curProject->id }}</th>
                     <td>{{ $curProject->title }}</td>
                     <td>{{ $curProject->slug }}</td>
-                    <td> <a class='btn btn-info' href="{{ route('admin.projects.show',['project'=>$curProject->slug ])}}">Dettagli</a> 
+                    <td> 
+                        <a class='btn btn-info' href="{{ route('admin.projects.show',['project'=>$curProject->slug])}}">Dettagli</a> 
+
                         <form action="{{route('admin.projects.destroy', ['project'=>$curProject->slug])}}" method="POST">
                             @csrf
                             @method('DELETE')
