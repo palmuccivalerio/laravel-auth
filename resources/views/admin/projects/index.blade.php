@@ -27,6 +27,7 @@
                     <td>{{ $curProject->slug }}</td>
                     <td> 
                         <a class='btn btn-info' href="{{ route('admin.projects.show',['project'=>$curProject->slug])}}">Dettagli</a> 
+                        <a class='btn btn-info' href="{{ route('admin.projects.edit',['project'=>$curProject->slug])}}">modifica</a> 
 
                         <form action="{{route('admin.projects.destroy', ['project'=>$curProject->slug])}}" method="POST">
                             @csrf
