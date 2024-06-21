@@ -6,4 +6,5 @@
     <p>{{$project->content}}</p>
     <p>Slug: {{$project->slug}}</p>
 
+
 @endsection
